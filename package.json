@@ -1,0 +1,58 @@
+{
+  "name": "contacts-back",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Javier Garcia Fajardo",
+  "bugs": {
+    "url": "https://github.com/JaviGF8/contacts-back/issues"
+  },
+  "description": "Contacts back project",
+  "homepage": "https://github.com/JaviGF8/contacts-back#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "license": "ISC",
+  "lint-staged": {
+    "*.{js}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
+  },
+  "main": "./src/start.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaviGF8/contacts-back.git"
+  },
+  "scripts": {
+    "lint": "lint-staged",
+    "start": "pm2 start src/start.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.1",
+    "helmet": "^3.21.3",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.9.1",
+    "pm2": "^4.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/register": "^7.8.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "standard": "^14.3.1"
+  }
+}
